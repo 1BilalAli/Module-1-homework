@@ -133,17 +133,37 @@ const OnlyLetters = function (str2) {
   return noNum;
 };
 
-console.log(OnlyLetters(str2));
-
 /* Ex.6 
    Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
 */
 
-console.log();
+const IsThisAnEmail = function (str3) {
+  if (/^\S+@\S+\.\S+$/.test(str3)) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 /* Ex.7
    Write the function WhatDayIsIt that should return the day of the week
 */
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+const WhatDayIsIt = function () {
+  return days[new Date().getDay()];
+};
+
+console.log(WhatDayIsIt());
 
 /* Ex.8
     Write the function RollTheDices that receives a numeric input and returns an object that contains both the sum of the value of the dices and the dices itself
