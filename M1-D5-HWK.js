@@ -139,6 +139,8 @@ console.log(OnlyLetters(str2));
    Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
 */
 
+console.log();
+
 /* Ex.7
    Write the function WhatDayIsIt that should return the day of the week
 */
