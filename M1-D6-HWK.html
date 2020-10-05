@@ -28,6 +28,15 @@
 
   <head></head>
 
+  <style>
+    footer {
+      text-align: center;
+      padding: 3px;
+      background-color: DarkSalmon;
+      color: white;
+    }
+  </style>
+
   <body>
     <h1>Smarty's Smartphones</h1>
     <table>
@@ -164,5 +173,35 @@
       aria-hidden="false"
       tabindex="0"
     ></iframe>
+    <div id="inputs">
+      <div>
+        <label for="message">Message Board</label>
+        <input
+          id="message"
+          style="height: 200px; width: 450px; font-size: 14pt"
+        />
+      </div>
+      <div>
+        <input
+          type="button"
+          id="sendButton"
+          value="Send"
+          onclick="saveData()"
+        />
+      </div>
+      <script>
+        function saveData() {
+          let messageInput = document.querySelector("#message");
+
+          console.log(messageInput.value);
+
+          messageInput.value = "Your message has been sent. Thanks!";
+        }
+      </script>
+    </div>
   </body>
+  <footer>
+    <p>Smarty's Smartphones</p>
+    <p>40 Osmaston Rd, Derby DE1 2HU</p>
+  </footer>
 </html>
