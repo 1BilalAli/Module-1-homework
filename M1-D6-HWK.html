@@ -26,16 +26,9 @@
         Write a function to change the footer address with a fake one
     -->
 
-  <head></head>
-
-  <style>
-    footer {
-      text-align: center;
-      padding: 3px;
-      background-color: DarkSalmon;
-      color: white;
-    }
-  </style>
+  <head>
+    <title>Smarty's Smartphones</title>
+  </head>
 
   <body>
     <h1>Smarty's Smartphones</h1>
@@ -197,7 +190,24 @@
 
           messageInput.value = "Your message has been sent. Thanks!";
         }
+        function showAlert() {
+          window.alert("WELCOME");
+        }
+        window.onload = showAlert();
+
+        const changeTitle = function () {
+          document.querySelector("title").innerText = "Dumby's Smartphones";
+        };
+        changeTitle();
       </script>
+      <style>
+        footer {
+          text-align: center;
+          padding: 3px;
+          background-color: DarkSalmon;
+          color: white;
+        }
+      </style>
     </div>
   </body>
   <footer>
