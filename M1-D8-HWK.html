@@ -37,6 +37,22 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       input[type="button"] {
         width: 160px;
         height: 40px;
+        background-color: #0099cc;
+        border-radius: 30px;
+        text-transform: uppercase;
+        color: white;
+      }
+
+      #big {
+        width: 220px;
+      }
+
+      h1 {
+        color: white;
+      }
+
+      body {
+        background-color: teal;
       }
     </style>
   </head>
@@ -70,6 +86,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
 
     <input type="color" placeholder="Color" id="colorPicker" />
     <input
+      id="big"
       type="button"
       value="Change task background"
       onclick="changeTaskBackgroundColor()"
@@ -117,7 +134,10 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
         console.log(myArray);
       }
 
-      window.addEventListener("DOMContentLoaded", function () {
+      let colourPicker = document.getElementById("colorPicker").value;
+      console.log(colourPicker);
+
+      window.addEventListener("DOMContentLoaded", colourChanger {
         function changeTaskBackgroundColor() {}
       });
 
