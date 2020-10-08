@@ -28,10 +28,15 @@
 
   <head>
     <title>Smarty's Smartphones</title>
+    <style>
+      .addColor {
+        color: red;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>Smarty's Smartphones</h1>
+    <h1 onmouseover="addClassToTitle()">Smarty's Smartphones</h1>
     <table>
       <tr>
         <th>Rank</th>
@@ -190,28 +195,34 @@
 
           messageInput.value = "Your message has been sent. Thanks!";
         }
-        function showAlert() {
-          window.alert("WELCOME");
-        }
-        window.onload = showAlert();
-
         const changeTitle = function () {
           document.querySelector("title").innerText = "Dumby's Smartphones";
         };
         changeTitle();
-      </script>
-      <style>
-        footer {
-          text-align: center;
-          padding: 3px;
-          background-color: DarkSalmon;
-          color: white;
+
+        const addClassToTitle = function () {
+          let myClass = document.querySelector("h1");
+          myClass.classList.add("addColor");
+        };
+
+        function showAlert() {
+          window.alert("WELCOME");
         }
-      </style>
+        window.onload = showAlert();
+      </script>
     </div>
   </body>
   <footer>
     <p>Smarty's Smartphones</p>
     <p>40 Osmaston Rd, Derby DE1 2HU</p>
+
+    <style>
+      footer {
+        text-align: center;
+        padding: 3px;
+        background-color: DarkSalmon;
+        color: white;
+      }
+    </style>
   </footer>
 </html>
