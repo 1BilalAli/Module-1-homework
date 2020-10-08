@@ -35,6 +35,19 @@
         width: 10%;
         text-align: center;
       }
+
+      #mainBingoBoard {
+        background-color: lightgray;
+        width: 100%;
+        margin-bottom: 20px;
+        border: 6px solid #1b1b1b;
+        border-radius: 8px;
+      }
+
+      .highlight {
+        color: black;
+        background-color: darkgrey;
+      }
     </style>
   </head>
   <body>
@@ -51,6 +64,7 @@
         onclick="pickNumber()"
       />
     </div>
+    <div id="theNumber"></div>
     <script>
       window.onload = function () {
         let bingoBoard = document.getElementById("mainBingoBoard");
@@ -65,25 +79,19 @@
           bingoBoard.appendChild(bingoTiles);
         }
       };
-
       function pickNumber() {
         const numberArray = [];
         for (let i = 1; i <= 76; i++) {
           numberArray.push(i);
         }
-        /*function getRndInteger(min, max) {
-          return Math.floor(Math.random() * (max - min)) + min;
-        }
-
-        const random = getRndInteger(1, 76);
-
-        const index = numberArray.indexOf(random);
-        numberArray.splice(index, 1);*/
-
         let rndIndex =
           numberArray[Math.floor(Math.random() * numberArray.length)];
-
-        console.log(rndIndex);
+        const bingoNumbers = document.querySelectorAll("h2")[rndIndex];
+        if ((bingoNumbers.classList = "highlight")) {
+          null;
+        } else {
+          bingoNumbers.className = "highlight";
+        }
       }
     </script>
   </body>
