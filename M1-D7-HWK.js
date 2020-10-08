@@ -10,13 +10,15 @@ window.onload = showAlert();
       Write a function to change the Title of the page in something else (execute the function in browser console)
   */
 const changeTitle = function () {
-  let titleChanger = document.querySelector("title");
-  titleChanger = "Dumby's Smartphones";
+  document.querySelector("title").innerText = "Dumby's Smartphones";
 };
 /* EXERCISE 3a
       Write a function to add a class to the page's h1 title in "red-color" (execute the function when title is hovered by mouse).
   */
-const addClassToTitle = function () {};
+const addClassToTitle = function () {
+  let myClass = document.querySelector("h1");
+  myClass.classList.add = "addColor";
+};
 /* EXERCISE 3b
       Write a function to remove "red-color" class from previous h1 (execute the function when the mouse leaves the title).
   */
